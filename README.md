@@ -1,17 +1,15 @@
-## My Project
+# ACK Common Packages
 
-TODO: Fill this README out!
+[![GoDoc](https://godoc.org/github.com/aws-controllers-k8s/pkg?status.svg)](https://godoc.org/github.com/aws-controllers-k8s/pkg)
 
-Be sure to:
+ack `pkg` provides a place for sharing common packages across the
+ACK repositories.
 
-* Change the title in this README
-* Edit your repository description on GitHub
+To learn more about ACK, please visit our
+[ACK community](https://github.com/aws-controllers-k8s/community) repository.
 
-## Security
-
-See [CONTRIBUTING](CONTRIBUTING.md#security-issue-notifications) for more information.
+If you are interested in contributing, see [CONTRIBUTING.md](./CONTRIBUTING.md)
 
 ## License
 
-This project is licensed under the Apache-2.0 License.
-
+This project is [licensed](/LICENSE) under the Apache-2.0 License.
