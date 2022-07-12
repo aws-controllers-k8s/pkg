@@ -11,7 +11,7 @@
 // express or implied. See the License for the specific language governing
 // permissions and limitations under the License.
 
-package util
+package io
 
 import (
 	"context"
@@ -22,6 +22,8 @@ import (
 	"strings"
 	"syscall"
 	"time"
+
+	"github.com/aws-controllers-k8s/pkg/git"
 )
 
 const (
@@ -111,7 +113,7 @@ func EnsureSDKRepo(
 
 		ctx, cancel := context.WithTimeout(ctx, defaultGitCloneTimeout)
 		defer cancel()
-		err = CloneRepository(ctx, sdkDir, sdkRepoURL)
+		err = git.CloneRepository(ctx, sdkDir, sdkRepoURL)
 		if err != nil {
 			return fmt.Errorf("canot clone repository: %v", err)
 		}
@@ -121,26 +123,21 @@ func EnsureSDKRepo(
 	if fetchTags {
 		ctx, cancel := context.WithTimeout(ctx, defaultGitFetchTimeout)
 		defer cancel()
-		err = FetchRepositoryTags(ctx, sdkDir)
+		err = git.FetchRepositoryTags(ctx, sdkDir)
 		if err != nil {
 			return fmt.Errorf("cannot fetch tags: %v", err)
 		}
 	}
 
-	// get sdkVersion and ensure its prefix
-	sdkVersion := GetSDKVersion(awsSDKGoVersion)
-	if err != nil {
-		return err
-	}
-	sdkVersion = EnsureSemverPrefix(sdkVersion)
+	awsSDKGoVersion = EnsureSemverPrefix(awsSDKGoVersion)
 
-	repo, err := LoadRepository(sdkDir)
+	repo, err := git.LoadRepository(sdkDir)
 	if err != nil {
 		return fmt.Errorf("cannot read local repository: %v", err)
 	}
 
 	// Now checkout the local repository.
-	err = CheckoutRepositoryTag(repo, sdkVersion)
+	err = git.CheckoutRepositoryTag(repo, awsSDKGoVersion)
 	if err != nil {
 		return fmt.Errorf("cannot checkout tag: %v", err)
 	}
@@ -154,10 +151,4 @@ func EnsureSemverPrefix(s string) string {
 	// trim all leading 'v' runes (characters)
 	s = strings.TrimLeft(s, "v")
 	return fmt.Sprintf("v%s", s)
-}
-
-// GetSDKVersion returns the github.com/aws/aws-sdk-go version to use
-// from the --aws-sdk-go-version flag.
-func GetSDKVersion(awsSDKGoVersion string) string {
-	return awsSDKGoVersion
 }

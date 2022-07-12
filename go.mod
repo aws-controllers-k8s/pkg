@@ -2,7 +2,9 @@ module github.com/aws-controllers-k8s/pkg
 
 go 1.18
 
-require gopkg.in/src-d/go-git.v4 v4.13.1
+require (
+	gopkg.in/src-d/go-git.v4 v4.13.1
+)
 
 require (
 	github.com/emirpasic/gods v1.12.0 // indirect
@@ -13,8 +15,8 @@ require (
 	github.com/src-d/gcfg v1.4.0 // indirect
 	github.com/xanzy/ssh-agent v0.2.1 // indirect
 	golang.org/x/crypto v0.0.0-20190701094942-4def268fd1a4 // indirect
-	golang.org/x/net v0.0.0-20190724013045-ca1201d0de80 // indirect
-	golang.org/x/sys v0.0.0-20190726091711-fc99dfbffb4e // indirect
+	golang.org/x/net v0.0.0-20220127200216-cd36cc0744dd // indirect
+	golang.org/x/sys v0.0.0-20211216021012-1d35b9e2eb4e // indirect
 	gopkg.in/src-d/go-billy.v4 v4.3.2 // indirect
 	gopkg.in/warnings.v0 v0.1.2 // indirect
 )
