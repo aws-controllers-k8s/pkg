@@ -3,6 +3,8 @@ module github.com/aws-controllers-k8s/pkg
 go 1.18
 
 require (
+	github.com/dlclark/regexp2 v1.4.0
+	github.com/iancoleman/strcase v0.2.0
 	github.com/stretchr/testify v1.7.1
 	k8s.io/apimachinery v0.23.0
 )
