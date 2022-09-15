@@ -71,7 +71,8 @@ var (
 		// prefix-converted (should be "md5OfBody")
 		{"MD5Of", "MD5Of", "md5Of", re2.MustCompile("M[dD]5Of", re2.None)},
 		// Prevent "MultipartUpload" from becoming "MultIPartUpload"
-		{"Ip", "IP", "ip", re2.MustCompile("Ip(?!art)", re2.None)},
+		// and "IPAM" from becoming "IPam"
+		{"Ip", "IP", "ip", re2.MustCompile("Ip(?!art|am)", re2.None)},
 		// Model fields containing AMI will always capitalize the 'A' hence we don't
 		// have to look for words starting with a lowercase 'A'
 		{"Amis", "AMIs", "amis", re2.MustCompile("Amis", re2.None)},
@@ -115,6 +116,7 @@ var (
 		// Prevent "IOPS" from becoming "IOps"
 		{"Io", "IO", "io", re2.MustCompile("Io(?!ps)", re2.None)},
 		{"Iops", "IOPS", "iops", nil},
+		{"Ipam", "IPAM", "ipam", nil},
 		{"Json", "JSON", "json", nil},
 		{"Jwt", "JWT", "jwt", nil},
 		{"Kms", "KMS", "kms", nil},
@@ -138,6 +140,7 @@ var (
 		{"Ssl", "SSL", "ssl", nil},
 		{"Tcp", "TCP", "tcp", nil},
 		{"Tde", "TDE", "tde", nil},
+		{"Tpm", "TPM", "tpm", nil},
 		{"Tls", "TLS", "tls", nil},
 		{"Udp", "UDP", "udp", nil},
 		// Need to prevent "security" from becoming "SecURIty"
