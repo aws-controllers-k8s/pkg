@@ -49,9 +49,10 @@ var (
 		// camel-cased "Ids" refers to a set of Identifiers, so the correct
 		// uppercase representation is "IDs"
 		{"Ids", "IDs", "ids", nil},
-		// Need to prevent "Identifier" from becoming "IDentifier",
-		// and "Idle" from becoming "IDle"
-		{"Id", "ID", "id", re2.MustCompile("Id(?!entifier|le|entity)", re2.None)},
+		// Need to prevent "Identifier" from becoming "IDentifier", and "Idle"
+		// from becoming "IDle" and "IdempotencyToken" from becoming
+		// "IDempotencyToken"
+		{"Id", "ID", "id", re2.MustCompile("Id(?!entifier|le|entity|empotency)", re2.None)},
 		// Need to prevent "DbInstance" from becoming "dbinstance" when lower
 		// prefix-converted (should be dbInstance). Amazingly, even within just
 		// the RDS API, there are fields named "DbiResourceId",
@@ -124,6 +125,8 @@ var (
 		{"Mfa", "MFA", "mfa", nil},
 		// Prevent "Native" from becoming "NATive"
 		{"Nat", "NAT", "nat", re2.MustCompile("Nat(?!i)", re2.None)},
+		// Prevent Oid from becoming oID
+		{"Oid", "OID", "oid", nil},
 		{"Oidc", "OIDC", "oidc", nil},
 		{"Ocsp", "OCSP", "ocsp", nil},
 		// Capitalize the 'd' following RAM in certain cases
@@ -238,7 +241,8 @@ func goName(original string, lowerFirst bool, snake bool) (result string) {
 //
 // Examples:
 //
-//  original   | lowerFirst | output
+//	original   | lowerFirst | output
+//
 // ------------+ ---------- + -------------------------
 // Identifier  | true       | Identifier
 // Identifier  | false      | Identifier
