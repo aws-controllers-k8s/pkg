@@ -71,6 +71,8 @@ var (
 		// Prevent "MD5OfBody" from becoming "MD5OfBody" when lower
 		// prefix-converted (should be "md5OfBody")
 		{"MD5Of", "MD5Of", "md5Of", re2.MustCompile("M[dD]5Of", re2.None)},
+		// Prevent IPC from becoming IPc (ECS Task definition field)
+		{"Ipc", "IPC", "ipc", re2.MustCompile("Ipc", re2.None)},
 		// Prevent "MultipartUpload" from becoming "MultIPartUpload"
 		// and "IPAM" from becoming "IPam"
 		{"Ip", "IP", "ip", re2.MustCompile("Ip(?!art|am)", re2.None)},
@@ -100,6 +102,7 @@ var (
 		{"Ebs", "EBS", "ebs", nil},
 		{"Ec2", "EC2", "ec2", nil},
 		{"Ecr", "ECR", "ecr", nil},
+		{"Ecs", "ECS", "ecs", nil},
 		// Prevent "Edit" from becoming "EDIt"
 		{"Edi", "EDI", "edi", re2.MustCompile("Edi(?!t)", re2.None)},
 		{"Efs", "EFS", "efs", nil},
@@ -129,6 +132,7 @@ var (
 		{"Oid", "OID", "oid", nil},
 		{"Oidc", "OIDC", "oidc", nil},
 		{"Ocsp", "OCSP", "ocsp", nil},
+		{"Pid", "PID", "pid", nil},
 		// Capitalize the 'd' following RAM in certain cases
 		{"Ramdisk", "RAMDisk", "ramDisk", re2.MustCompile("Ramdisk", re2.None)},
 		// Model fields starting with 'Ram' refer to RAM
