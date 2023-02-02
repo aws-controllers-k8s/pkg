@@ -128,8 +128,9 @@ var (
 		{"Mfa", "MFA", "mfa", nil},
 		// Prevent "Native" from becoming "NATive"
 		{"Nat", "NAT", "nat", re2.MustCompile("Nat(?!i)", re2.None)},
-		// Prevent Oid from becoming oID
-		{"Oid", "OID", "oid", nil},
+		// Prevent Oid from becoming oID and OIDC from becoming OIDc
+		{"Oid", "OID", "oid", re2.MustCompile("Oid(?!c)", re2.None)},
+		{"OID", "OID", "oid", re2.MustCompile("OID(?!C)", re2.None)},
 		{"Oidc", "OIDC", "oidc", nil},
 		{"Ocsp", "OCSP", "ocsp", nil},
 		{"Pid", "PID", "pid", nil},
