@@ -142,6 +142,7 @@ var (
 		{"Sdk", "SDK", "sdk", nil},
 		{"Sha256", "SHA256", "sha256", nil},
 		{"Sns", "SNS", "sns", nil},
+		{"Sql", "SQL", "sql", nil},
 		{"Sqs", "SQS", "sqs", nil},
 		{"Sriov", "SRIOV", "sriov", nil},
 		{"Sse", "SSE", "sse", nil},
