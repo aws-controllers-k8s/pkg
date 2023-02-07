@@ -39,6 +39,9 @@ func TestNames(t *testing.T) {
 		{"AwsVpcConfiguration", "AWSVPCConfiguration", "awsVPCConfiguration", "aws_vpc_configuration", "awsvpcconfiguration"},
 		{"AWSVpcConfiguration", "AWSVPCConfiguration", "awsVPCConfiguration", "aws_vpc_configuration", "awsvpcconfiguration"},
 		{"AWSVPCConfiguration", "AWSVPCConfiguration", "awsVPCConfiguration", "aws_vpc_configuration", "awsvpcconfiguration"},
+		// eventbridge has a NetworkConfiguration.AwsvpcConfiguration field for
+		// configuration of ECS tasks in "awsvpc" mode
+		{"AwsvpcConfiguration", "AWSVPCConfiguration", "awsVPCConfiguration", "aws_vpc_configuration", "awsvpcconfiguration"},
 		{"CacheSecurityGroup", "CacheSecurityGroup", "cacheSecurityGroup", "cache_security_group", "cachesecuritygroup"},
 		{"Camila", "Camila", "camila", "camila", "camila"},
 		{"DbInstanceId", "DBInstanceID", "dbInstanceID", "db_instance_id", "dbinstanceid"},
