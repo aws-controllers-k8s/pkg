@@ -86,6 +86,14 @@ var (
 		{"Api", "API", "api", nil},
 		{"Arn", "ARN", "arn", nil},
 		{"Asn", "ASN", "asn", nil},
+		// eventbridge has a NetworkConfiguration.awsvpcConfiguration field for
+		// configuration of ECS tasks in "awsvpc" mode. aws-sdk-go transforms
+		// this to AwsvpcConfiguration in order to export the field name in
+		// Golang.
+		// (See https://github.com/aws/aws-sdk-go/blob/5707eba1610d563b9c563dbc862587649bcb9811/service/eventbridge/api.go#L13088)
+		// We need to prevent AwsvpcConfiguration from becoming
+		// AWSvpcConfiguration
+		{"Awsvpc", "AWSVPC", "awsVPC", nil},
 		{"Aws", "AWS", "aws", nil},
 		{"Az", "AZ", "az", nil},
 		{"Bgp", "BGP", "bgp", nil},
