@@ -118,6 +118,7 @@ var (
 		// Prevent "Enable" and "Enabling" from becoming "ENAble"
 		{"Ena", "ENA", "ena", re2.MustCompile("Ena(?!bl)", re2.None)},
 		{"Ecmp", "ECMP", "ecmp", nil},
+		{"Fifo", "FIFO", "fifo", nil},
 		{"Fpga", "FPGA", "fpga", nil},
 		{"Gpu", "GPU", "gpu", nil},
 		{"Html", "HTML", "html", nil},
