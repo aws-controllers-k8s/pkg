@@ -148,6 +148,8 @@ var (
 		// Model fields starting with 'Ram' refer to RAM
 		{"Ram", "RAM", "ram", re2.MustCompile("Ram", re2.None)},
 		{"Rfc", "RFC", "rfc", nil},
+		{"Sasl", "SASL", "sasl", nil},
+		{"Scram", "SCRAM", "scram", nil},
 		{"Sdk", "SDK", "sdk", nil},
 		{"Sha256", "SHA256", "sha256", nil},
 		{"Sns", "SNS", "sns", nil},
