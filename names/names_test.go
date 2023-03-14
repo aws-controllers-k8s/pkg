@@ -44,6 +44,7 @@ func TestNames(t *testing.T) {
 		{"AwsvpcConfiguration", "AWSVPCConfiguration", "awsVPCConfiguration", "aws_vpc_configuration", "awsvpcconfiguration"},
 		{"CacheSecurityGroup", "CacheSecurityGroup", "cacheSecurityGroup", "cache_security_group", "cachesecuritygroup"},
 		{"Camila", "Camila", "camila", "camila", "camila"},
+		{"AuthorizerResultTtlInSeconds", "AuthorizerResultTTLInSeconds", "authorizerResultTTLInSeconds", "authorizer_result_ttl_in_seconds", "authorizerresultttlinseconds"},
 		{"DbInstanceId", "DBInstanceID", "dbInstanceID", "db_instance_id", "dbinstanceid"},
 		{"DBInstanceId", "DBInstanceID", "dbInstanceID", "db_instance_id", "dbinstanceid"},
 		{"DBInstanceID", "DBInstanceID", "dbInstanceID", "db_instance_id", "dbinstanceid"},
@@ -99,6 +100,8 @@ func TestNames(t *testing.T) {
 		{"SriovNetSupport", "SRIOVNetSupport", "sriovNetSupport", "sriov_net_support", "sriovnetsupport"},
 		{"SSEKMSKeyID", "SSEKMSKeyID", "sseKMSKeyID", "sse_kms_key_id", "ssekmskeyid"},
 		{"Tpm", "TPM", "tpm", "tpm", "tpm"},
+		{"Throttle", "Throttle", "throttle", "throttle", "throttle"},
+		{"Throttling", "Throttling", "throttling", "throttling", "throttling"},
 		{"UUID", "UUID", "uuid", "uuid", "uuid"},
 		{"Vlan", "VLAN", "vlan", "vlan", "vlan"},
 	}
