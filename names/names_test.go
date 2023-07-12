@@ -105,6 +105,8 @@ func TestNames(t *testing.T) {
 		{"Throttling", "Throttling", "throttling", "throttling", "throttling"},
 		{"UUID", "UUID", "uuid", "uuid", "uuid"},
 		{"Vlan", "VLAN", "vlan", "vlan", "vlan"},
+		{"LastDecreaseDateTime", "LastDecreaseDateTime", "lastDecreaseDateTime", "last_decrease_date_time", "lastdecreasedatetime"},
+		{"NumberOfDecreasesToday", "NumberOfDecreasesToday", "numberOfDecreasesToday", "number_of_decreases_today", "numberofdecreasestoday"},
 	}
 	for _, tc := range testCases {
 		n := names.New(tc.original)
