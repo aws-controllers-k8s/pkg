@@ -111,7 +111,7 @@ var (
 		{"Ec2", "EC2", "ec2", nil},
 		// Prevent "Secret" from becoming "s_ecr_et"
 		// Prevent "Decrease" from becoming "d_ecr_ease"
-		{"Ecr", "ECR", "ecr", re2.MustCompile("(?!S|s|D|d)ecr(?!et|ease)", re2.None)},
+		{"Ecr", "ECR", "ecr", re2.MustCompile("(?!D|d|S)Ecr(?!eases|ease|et)", re2.None)},
 		{"Ecs", "ECS", "ecs", nil},
 		// Prevent "Edit" from becoming "EDIt"
 		{"Edi", "EDI", "edi", re2.MustCompile("Edi(?!t)", re2.None)},
@@ -152,6 +152,7 @@ var (
 		{"Rfc", "RFC", "rfc", nil},
 		{"Sasl", "SASL", "sasl", nil},
 		{"Scram", "SCRAM", "scram", nil},
+		{"Secret", "SECRET", "secret", nil},
 		{"Sdk", "SDK", "sdk", nil},
 		{"Sha256", "SHA256", "sha256", nil},
 		{"Sns", "SNS", "sns", nil},
