@@ -109,8 +109,9 @@ var (
 		{"Dpd", "DPD", "dpd", nil},
 		{"Ebs", "EBS", "ebs", nil},
 		{"Ec2", "EC2", "ec2", nil},
+		// Prevent "Secret" from becoming "s_ecr_et"
 		// Prevent "Decrease" from becoming "d_ecr_ease"
-		{"Ecr", "ECR", "ecr", re2.MustCompile("(?!D|d)Ecr(?!eases|ease)", re2.None)},
+		{"Ecr", "ECR", "ecr", re2.MustCompile("(?!S|s|D|d)[Ee]cr(?!et|ease)", re2.None)},
 		{"Ecs", "ECS", "ecs", nil},
 		// Prevent "Edit" from becoming "EDIt"
 		{"Edi", "EDI", "edi", re2.MustCompile("Edi(?!t)", re2.None)},
