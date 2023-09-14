@@ -96,6 +96,7 @@ func TestNames(t *testing.T) {
 		{"RequestedAmiVersion", "RequestedAMIVersion", "requestedAMIVersion", "requested_ami_version", "requestedamiversion"},
 		{"SaslScram512Auth", "SASLSCRAM512Auth", "saslSCRAM512Auth", "sasl_scram_512_auth", "saslscram512auth"},
 		{"Secret", "Secret", "secret", "secret", "secret"},
+		{"Secrets", "Secrets", "secrets", "secrets", "secrets"},
 		{"Sns", "SNS", "sns", "sns", "sns"},
 		{"Sql", "SQL", "sql", "sql", "sql"},
 		{"Sqs", "SQS", "sqs", "sqs", "sqs"},
