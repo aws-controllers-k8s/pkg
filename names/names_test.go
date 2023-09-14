@@ -56,6 +56,7 @@ func TestNames(t *testing.T) {
 		{"EdiPartyName", "EDIPartyName", "ediPartyName", "edi_party_name", "edipartyname"},
 		{"Editable", "Editable", "editable", "editable", "editable"},
 		{"Ena", "ENA", "ena", "ena", "ena"},
+		{"Ecr", "ECR", "ecr", "ecr", "ecr"},
 		{"Ecs", "ECS", "ecs", "ecs", "ecs"},
 		{"Examine", "Examine", "examine", "examine", "examine"},
 		{"Family", "Family", "family", "family", "family"},
@@ -95,6 +96,7 @@ func TestNames(t *testing.T) {
 		{"RequestedAmiVersion", "RequestedAMIVersion", "requestedAMIVersion", "requested_ami_version", "requestedamiversion"},
 		{"SaslScram512Auth", "SASLSCRAM512Auth", "saslSCRAM512Auth", "sasl_scram_512_auth", "saslscram512auth"},
 		{"Secret", "Secret", "secret", "secret", "secret"},
+		{"Secrets", "Secrets", "secrets", "secrets", "secrets"},
 		{"Sns", "SNS", "sns", "sns", "sns"},
 		{"Sql", "SQL", "sql", "sql", "sql"},
 		{"Sqs", "SQS", "sqs", "sqs", "sqs"},
@@ -105,6 +107,8 @@ func TestNames(t *testing.T) {
 		{"Throttling", "Throttling", "throttling", "throttling", "throttling"},
 		{"UUID", "UUID", "uuid", "uuid", "uuid"},
 		{"Vlan", "VLAN", "vlan", "vlan", "vlan"},
+		{"LastDecreaseDateTime", "LastDecreaseDateTime", "lastDecreaseDateTime", "last_decrease_date_time", "lastdecreasedatetime"},
+		{"NumberOfDecreasesToday", "NumberOfDecreasesToday", "numberOfDecreasesToday", "number_of_decreases_today", "numberofdecreasestoday"},
 	}
 	for _, tc := range testCases {
 		n := names.New(tc.original)
