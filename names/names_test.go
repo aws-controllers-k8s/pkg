@@ -103,6 +103,7 @@ func TestNames(t *testing.T) {
 		{"SriovNetSupport", "SRIOVNetSupport", "sriovNetSupport", "sriov_net_support", "sriovnetsupport"},
 		{"SSEKMSKeyID", "SSEKMSKeyID", "sseKMSKeyID", "sse_kms_key_id", "ssekmskeyid"},
 		{"Tpm", "TPM", "tpm", "tpm", "tpm"},
+		{"TTL", "TTL", "ttl", "ttl", "ttl"},
 		{"Throttle", "Throttle", "throttle", "throttle", "throttle"},
 		{"Throttling", "Throttling", "throttling", "throttling", "throttling"},
 		{"UUID", "UUID", "uuid", "uuid", "uuid"},
