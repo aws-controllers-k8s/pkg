@@ -108,6 +108,7 @@ func TestNames(t *testing.T) {
 		{"Throttling", "Throttling", "throttling", "throttling", "throttling"},
 		{"UUID", "UUID", "uuid", "uuid", "uuid"},
 		{"Vlan", "VLAN", "vlan", "vlan", "vlan"},
+		{"MiBps", "MiBps", "miBps", "mi_bps", "mibps"},
 		{"LastDecreaseDateTime", "LastDecreaseDateTime", "lastDecreaseDateTime", "last_decrease_date_time", "lastdecreasedatetime"},
 		{"NumberOfDecreasesToday", "NumberOfDecreasesToday", "numberOfDecreasesToday", "number_of_decreases_today", "numberofdecreasestoday"},
 	}
