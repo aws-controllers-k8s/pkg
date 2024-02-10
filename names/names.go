@@ -137,6 +137,7 @@ var (
 		{"Kms", "KMS", "kms", nil},
 		{"Ldap", "LDAP", "ldap", nil},
 		{"Mfa", "MFA", "mfa", nil},
+		{"Mibps", "MiBps", "miBps", re2.MustCompile("Mibps", re2.None)},
 		// Prevent "Native" from becoming "NATive"
 		{"Nat", "NAT", "nat", re2.MustCompile("Nat(?!i)", re2.None)},
 		// Prevent Oid from becoming oID and OIDC from becoming OIDc
