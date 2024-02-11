@@ -48,7 +48,7 @@ var (
 		// Special... even though IDS is a valid initialism, in AWS APIs, the
 		// camel-cased "Ids" refers to a set of Identifiers, so the correct
 		// uppercase representation is "IDs"
-		{"Ids", "IDs", "ids", nil},
+		{"Ids", "IDs", "ids", re2.MustCompile("(?![U|u])Ids", re2.None)},
 		// Need to prevent "Identifier" from becoming "IDentifier", and "Idle"
 		// from becoming "IDle" and "IdempotencyToken" from becoming
 		// "IDempotencyToken"
@@ -122,6 +122,7 @@ var (
 		{"Ecmp", "ECMP", "ecmp", nil},
 		{"Fifo", "FIFO", "fifo", nil},
 		{"Fpga", "FPGA", "fpga", nil},
+		{"Gid", "GID", "gid", nil},
 		{"Gpu", "GPU", "gpu", nil},
 		{"Html", "HTML", "html", nil},
 		{"Http", "HTTP", "http", nil},
@@ -171,6 +172,8 @@ var (
 		{"Uri", "URI", "uri", re2.MustCompile("(?!sec)uri(?!ty)|(Uri)", re2.None)},
 		{"Url", "URL", "url", nil},
 		{"Uuid", "UUID", "uuid", nil},
+		{"Uids", "UIDs", "uids", re2.MustCompile("Uids", re2.None)},
+		{"Uid", "UID", "uid", re2.MustCompile("Uid", re2.None)},
 		{"Vlan", "VLAN", "vlan", nil},
 		{"Vpc", "VPC", "vpc", nil},
 		{"Vpn", "VPN", "vpn", nil},
