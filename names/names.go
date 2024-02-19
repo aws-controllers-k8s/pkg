@@ -82,6 +82,7 @@ var (
 		{"Ami", "AMI", "ami", re2.MustCompile("Ami", re2.None)},
 		// Easy find-and-replacements...
 		{"Acl", "ACL", "acl", nil},
+		{"Acm", "ACM", "acm", nil},
 		{"Acp", "ACP", "acp", nil},
 		{"Api", "API", "api", nil},
 		{"Arn", "ARN", "arn", nil},
@@ -146,6 +147,7 @@ var (
 		{"OID", "OID", "oid", re2.MustCompile("OID(?!C)", re2.None)},
 		{"Oidc", "OIDC", "oidc", nil},
 		{"Ocsp", "OCSP", "ocsp", nil},
+		{"Pca", "PCA", "pca", nil},
 		{"Pid", "PID", "pid", nil},
 		// Capitalize the 'd' following RAM in certain cases
 		{"Ramdisk", "RAMDisk", "ramDisk", re2.MustCompile("Ramdisk", re2.None)},

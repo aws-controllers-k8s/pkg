@@ -33,6 +33,7 @@ func TestNames(t *testing.T) {
 		expectSnakeStripped string
 	}{
 		{"Ami", "AMI", "ami", "ami", "ami"},
+		{"Acm", "ACM", "acm", "acm", "acm"},
 		{"AmiLaunchIndex", "AMILaunchIndex", "amiLaunchIndex", "ami_launch_index", "amilaunchindex"},
 		{"Amis", "AMIs", "amis", "amis", "amis"},
 		{"AmiType", "AMIType", "amiType", "ami_type", "amitype"},
@@ -89,6 +90,7 @@ func TestNames(t *testing.T) {
 		{"Package", "Package", "package_", "package_", "package"},
 		{"Param", "Param", "param", "param", "param"},
 		{"Pid", "PID", "pid", "pid", "pid"},
+		{"Pca", "PCA", "pca", "pca", "pca"},
 		{"Uid", "UID", "uid", "uid", "uid"},
 		{"Uids", "UIDs", "uids", "uids", "uids"},
 		{"Gids", "GIDs", "gids", "gids", "gids"},
