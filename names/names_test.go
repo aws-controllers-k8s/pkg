@@ -94,6 +94,7 @@ func TestNames(t *testing.T) {
 		{"Uid", "UID", "uid", "uid", "uid"},
 		{"Uids", "UIDs", "uids", "uids", "uids"},
 		{"Gids", "GIDs", "gids", "gids", "gids"},
+		{"Grpc", "GRPC", "grpc", "grpc", "grpc"},
 		{"Ram", "RAM", "ram", "ram", "ram"},
 		{"RamdiskId", "RAMDiskID", "ramDiskID", "ram_disk_id", "ramdiskid"},
 		{"RamDiskId", "RAMDiskID", "ramDiskID", "ram_disk_id", "ramdiskid"},

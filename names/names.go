@@ -125,6 +125,7 @@ var (
 		{"Fpga", "FPGA", "fpga", nil},
 		{"Gid", "GID", "gid", nil},
 		{"Gpu", "GPU", "gpu", nil},
+		{"Grpc", "GRPC", "grpc", nil},
 		{"Html", "HTML", "html", nil},
 		{"Http", "HTTP", "http", nil},
 		{"Https", "HTTPS", "https", nil},
