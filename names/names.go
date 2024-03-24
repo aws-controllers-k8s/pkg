@@ -73,6 +73,9 @@ var (
 		{"MD5Of", "MD5Of", "md5Of", re2.MustCompile("M[dD]5Of", re2.None)},
 		// Prevent IPC from becoming IPc (ECS Task definition field)
 		{"Ipc", "IPC", "ipc", re2.MustCompile("Ipc", re2.None)},
+		// Prevent IPv4 from becoming iPv4
+		{"IPv4", "IPv4", "ipv4", re2.MustCompile("I[Pp]v4", re2.None)},
+		{"IPv6", "IPv6", "ipv6", re2.MustCompile("I[Pp]v6", re2.None)},
 		// Prevent "MultipartUpload" from becoming "MultIPartUpload"
 		// and "IPAM" from becoming "IPam"
 		{"Ip", "IP", "ip", re2.MustCompile("Ip(?!art|am)", re2.None)},
