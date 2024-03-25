@@ -70,6 +70,13 @@ func TestNames(t *testing.T) {
 		{"IoPerformance", "IOPerformance", "ioPerformance", "io_performance", "ioperformance"},
 		{"Iops", "IOPS", "iops", "iops", "iops"},
 		{"Ip", "IP", "ip", "ip", "ip"},
+		// The ipv_4/ipv_6 is a special case mainly caused by github.com/iancoleman/strcase
+		// which does not handle this case correctly. See https://github.com/iancoleman/strcase/issues/22
+		// This is OK for now as snake case is only used for package names and not for field names.
+		{"IPv4", "IPv4", "ipv4", "ipv_4", "ipv4"},
+		{"Ipv4", "IPv4", "ipv4", "ipv_4", "ipv4"},
+		{"IPv6", "IPv6", "ipv6", "ipv_6", "ipv6"},
+		{"Ipv6", "IPv6", "ipv6", "ipv_6", "ipv6"},
 		{"Ipam", "IPAM", "ipam", "ipam", "ipam"},
 		{"Ipc", "IPC", "ipc", "ipc", "ipc"},
 		{"Frame", "Frame", "frame", "frame", "frame"},
