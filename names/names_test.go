@@ -32,6 +32,7 @@ func TestNames(t *testing.T) {
 		expectSnake         string
 		expectSnakeStripped string
 	}{
+		{"AIML", "AIML", "aiml", "aiml", "aiml"},
 		{"Ami", "AMI", "ami", "ami", "ami"},
 		{"Acm", "ACM", "acm", "acm", "acm"},
 		{"AmiLaunchIndex", "AMILaunchIndex", "amiLaunchIndex", "ami_launch_index", "amilaunchindex"},
@@ -69,6 +70,7 @@ func TestNames(t *testing.T) {
 		{"Identifier", "Identifier", "identifier", "identifier", "identifier"},
 		{"IoPerformance", "IOPerformance", "ioPerformance", "io_performance", "ioperformance"},
 		{"Iops", "IOPS", "iops", "iops", "iops"},
+		{"IPAddressType", "IPAddressType", "ipAddressType", "ip_address_type", "ipaddresstype"},
 		{"Ip", "IP", "ip", "ip", "ip"},
 		// The ipv_4/ipv_6 is a special case mainly caused by github.com/iancoleman/strcase
 		// which does not handle this case correctly. See https://github.com/iancoleman/strcase/issues/22
