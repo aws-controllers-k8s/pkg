@@ -81,6 +81,7 @@ var (
 		// Prevent "MultipartUpload" from becoming "MultIPartUpload"
 		// and "IPAM" from becoming "IPam"
 		{"Ip", "IP", "ip", re2.MustCompile("Ip(?!art|am)", re2.None)},
+		{"IPSet", "IPSet", "ip_set", nil},
 		// Model fields containing AMI will always capitalize the 'A' hence we don't
 		// have to look for words starting with a lowercase 'A'
 		{"Amis", "AMIs", "amis", re2.MustCompile("Amis", re2.None)},

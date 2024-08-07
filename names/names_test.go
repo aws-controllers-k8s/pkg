@@ -71,6 +71,7 @@ func TestNames(t *testing.T) {
 		{"IoPerformance", "IOPerformance", "ioPerformance", "io_performance", "ioperformance"},
 		{"Iops", "IOPS", "iops", "iops", "iops"},
 		{"IPAddressType", "IPAddressType", "ipAddressType", "ip_address_type", "ipaddresstype"},
+		{"IPSetType", "IPSetType", "ipSetType", "ip_set_type", "ipsettype"},
 		{"Ip", "IP", "ip", "ip", "ip"},
 		// The ipv_4/ipv_6 is a special case mainly caused by github.com/iancoleman/strcase
 		// which does not handle this case correctly. See https://github.com/iancoleman/strcase/issues/22
