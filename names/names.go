@@ -142,6 +142,7 @@ var (
 		{"Io", "IO", "io", re2.MustCompile("Io(?!ps)", re2.None)},
 		{"Iops", "IOPS", "iops", nil},
 		{"Ipam", "IPAM", "ipam", nil},
+		{"Ja3", "JA3", "ja3", nil},
 		{"Json", "JSON", "json", nil},
 		{"Jwt", "JWT", "jwt", nil},
 		{"Kms", "KMS", "kms", nil},
@@ -167,6 +168,7 @@ var (
 		{"Sdk", "SDK", "sdk", nil},
 		{"Sha256", "SHA256", "sha256", nil},
 		{"Sns", "SNS", "sns", nil},
+		{"Sqli", "SQLI", "sqli", nil},
 		{"Sql", "SQL", "sql", nil},
 		{"Sqs", "SQS", "sqs", nil},
 		{"Sriov", "SRIOV", "sriov", nil},
@@ -190,6 +192,7 @@ var (
 		{"Vgw", "VGW", "vgw", nil},
 		{"Waf", "WAF", "waf", nil},
 		{"Xml", "XML", "xml", nil},
+		{"Xss", "XSS", "xss", nil},
 		{"Yaml", "YAML", "yaml", nil},
 	}
 )
