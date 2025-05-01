@@ -63,6 +63,8 @@ func TestNames(t *testing.T) {
 		{"Examine", "Examine", "examine", "examine", "examine"},
 		{"Family", "Family", "family", "family", "family"},
 		{"FifoTopic", "FIFOTopic", "fifoTopic", "fifo_topic", "fifotopic"},
+		{"HttpsPort", "HTTPSPort", "httpsPort", "https_port", "httpsport"},
+		{"HTTPSPort", "HTTPSPort", "httpsPort", "https_port", "httpsport"},
 		{"Id", "ID", "id", "id", "id"},
 		{"ID", "ID", "id", "id", "id"},
 		{"Idle", "Idle", "idle", "idle", "idle"},
