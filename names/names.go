@@ -135,7 +135,7 @@ var (
 		{"Grpc", "GRPC", "grpc", nil},
 		{"Html", "HTML", "html", nil},
 		// Prevent HTTPSPort from becoming httpSPort
-		{"Http", "HTTP", "http", re2.MustCompile("HTTP(?!s|S)", re2.None)},
+		{"Http", "HTTP", "http", re2.MustCompile("(HTTP((?!S[A-Z]))|Http(?!s))", re2.None)},
 		{"Https", "HTTPS", "https", nil},
 		{"Iam", "IAM", "iam", nil},
 		{"Icmp", "ICMP", "icmp", nil},
