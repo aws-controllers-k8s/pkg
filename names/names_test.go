@@ -137,6 +137,7 @@ func TestNames(t *testing.T) {
 		{"Throttle", "Throttle", "throttle", "throttle", "throttle"},
 		{"Throttling", "Throttling", "throttling", "throttling", "throttling"},
 		{"UUID", "UUID", "uuid", "uuid", "uuid"},
+		{"Ui", "UI", "ui", "ui", "ui"},
 		{"Vlan", "VLAN", "vlan", "vlan", "vlan"},
 		{"Xss", "XSS", "xss", "xss", "xss"},
 		{"MiBps", "MiBps", "miBps", "mi_bps", "mibps"},
