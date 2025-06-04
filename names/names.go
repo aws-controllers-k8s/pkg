@@ -187,7 +187,7 @@ var (
 		{"Uuid", "UUID", "uuid", nil},
 		{"Uids", "UIDs", "uids", re2.MustCompile("Uids", re2.None)},
 		{"Uid", "UID", "uid", re2.MustCompile("Uid", re2.None)},
-		// Need to prevent "uid" or "Uuid" from becoming "UId" or "uUId"
+		// Need to prevent "Uid" or "Uuid" from becoming "UId" or "UUId"
 		{"Ui", "UI", "ui", re2.MustCompile("U(I|i)(?!D|d)", re2.None)},
 		{"Vlan", "VLAN", "vlan", nil},
 		{"Vpc", "VPC", "vpc", nil},
