@@ -187,6 +187,7 @@ var (
 		{"Uuid", "UUID", "uuid", nil},
 		{"Uids", "UIDs", "uids", re2.MustCompile("Uids", re2.None)},
 		{"Uid", "UID", "uid", re2.MustCompile("Uid", re2.None)},
+		{"Ui", "UI", "ui", nil},
 		{"Vlan", "VLAN", "vlan", nil},
 		{"Vpc", "VPC", "vpc", nil},
 		{"Vpn", "VPN", "vpn", nil},
