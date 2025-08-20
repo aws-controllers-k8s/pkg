@@ -182,7 +182,7 @@ var (
 		{"Ttl", "TTL", "ttl", re2.MustCompile("(?!Thro)((?i)ttl)(?!ing|e)", re2.None)},
 		{"Udp", "UDP", "udp", nil},
 		// Need to prevent "security" from becoming "SecURIty"
-		{"Uri", "URI", "uri", re2.MustCompile("(?!sec)uri(?!ty)|(Uri)", re2.None)},
+		{"Uri", "URI", "uri", re2.MustCompile("(?!sec)uri(?!ty)|(Uri)|(URI)", re2.None)},
 		{"Url", "URL", "url", nil},
 		{"Uuid", "UUID", "uuid", nil},
 		{"Uids", "UIDs", "uids", re2.MustCompile("Uids", re2.None)},
