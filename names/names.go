@@ -52,7 +52,7 @@ var (
 		// Need to prevent "Identifier" from becoming "IDentifier", and "Idle"
 		// from becoming "IDle" and "IdempotencyToken" from becoming
 		// "IDempotencyToken"
-		{"Id", "ID", "id", re2.MustCompile("Id(?!entifier|le|entity|empotency)", re2.None)},
+		{"Id", "ID", "id", re2.MustCompile("Id(?!entifier|le|entity|entities|empotency)", re2.None)},
 		// Need to prevent "DbInstance" from becoming "dbinstance" when lower
 		// prefix-converted (should be dbInstance). Amazingly, even within just
 		// the RDS API, there are fields named "DbiResourceId",
@@ -190,7 +190,8 @@ var (
 		// Need to prevent "Uid" or "Uuid" from becoming "UId" or "UUId"
 		{"Ui", "UI", "ui", re2.MustCompile("U(I|i)(?!D|d)", re2.None)},
 		{"Vlan", "VLAN", "vlan", nil},
-		{"Vpc", "VPC", "vpc", nil},
+		{"Vpce", "VPCE", "vpce", re2.MustCompile("(V|v)pce", re2.None)},
+		{"Vpc", "VPC", "vpc", re2.MustCompile("(V|v)pc(?!e)", re2.None)},
 		{"Vpn", "VPN", "vpn", nil},
 		{"Vgw", "VGW", "vgw", nil},
 		{"Waf", "WAF", "waf", nil},
