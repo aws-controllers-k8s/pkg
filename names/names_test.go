@@ -83,6 +83,7 @@ func TestNames(t *testing.T) {
 		{"Identifiers", "Identifiers", "identifiers", "identifiers", "identifiers"},
 		{"Identity", "Identity", "identity", "identity", "identity"},
 		{"Identities", "Identities", "identities", "identities", "identities"},
+		{"Idc", "IDC", "idc", "idc", "idc"},
 		{"IoPerformance", "IOPerformance", "ioPerformance", "io_performance", "ioperformance"},
 		{"Iops", "IOPS", "iops", "iops", "iops"},
 		{"IPAddressType", "IPAddressType", "ipAddressType", "ip_address_type", "ipaddresstype"},
