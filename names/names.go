@@ -52,7 +52,8 @@ var (
 		// Need to prevent "Identifier" from becoming "IDentifier", and "Idle"
 		// from becoming "IDle" and "IdempotencyToken" from becoming
 		// "IDempotencyToken"
-		{"Id", "ID", "id", re2.MustCompile("Id(?!entifier|le|entity|entities|empotency)", re2.None)},
+		{"Id", "ID", "id", re2.MustCompile("Id(?!entifier|le|entity|entities|empotency|c)", re2.None)},
+		{"Idc", "IDC", "idc", re2.MustCompile("Idc", re2.None)},
 		// Need to prevent "DbInstance" from becoming "dbinstance" when lower
 		// prefix-converted (should be dbInstance). Amazingly, even within just
 		// the RDS API, there are fields named "DbiResourceId",
