@@ -94,6 +94,7 @@ var (
 		{"Acp", "ACP", "acp", nil},
 		{"Api", "API", "api", nil},
 		{"Arn", "ARN", "arn", nil},
+		{"ArgoCd", "ArgoCD", "argoCD", nil},
 		{"Asn", "ASN", "asn", nil},
 		// eventbridge has a NetworkConfiguration.awsvpcConfiguration field for
 		// configuration of ECS tasks in "awsvpc" mode. aws-sdk-go transforms
