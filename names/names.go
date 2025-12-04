@@ -193,7 +193,7 @@ var (
 		{"Ui", "UI", "ui", re2.MustCompile("U(I|i)(?!D|d)", re2.None)},
 		{"Vlan", "VLAN", "vlan", nil},
 		{"Vpce", "VPCE", "vpce", re2.MustCompile("(V|v)pce", re2.None)},
-		{"Vpc", "VPC", "vpc", re2.MustCompile("(V|v)pc(?!e)", re2.None)},
+		{"Vpc", "VPC", "vpc", re2.MustCompile("(V|v)(P|p)(C|c)(?!e)", re2.None)},
 		{"Vpn", "VPN", "vpn", nil},
 		{"Vgw", "VGW", "vgw", nil},
 		{"Waf", "WAF", "waf", nil},
