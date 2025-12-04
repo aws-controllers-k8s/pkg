@@ -38,6 +38,7 @@ func TestNames(t *testing.T) {
 		{"AmiLaunchIndex", "AMILaunchIndex", "amiLaunchIndex", "ami_launch_index", "amilaunchindex"},
 		{"Amis", "AMIs", "amis", "amis", "amis"},
 		{"AmiType", "AMIType", "amiType", "ami_type", "amitype"},
+		{"ArgoCd", "ArgoCD", "argoCD", "argo_cd", "argocd"},
 		{"AwsVpcConfiguration", "AWSVPCConfiguration", "awsVPCConfiguration", "aws_vpc_configuration", "awsvpcconfiguration"},
 		{"AWSVpcConfiguration", "AWSVPCConfiguration", "awsVPCConfiguration", "aws_vpc_configuration", "awsvpcconfiguration"},
 		{"AWSVPCConfiguration", "AWSVPCConfiguration", "awsVPCConfiguration", "aws_vpc_configuration", "awsvpcconfiguration"},
