@@ -89,7 +89,9 @@ var (
 		{"Ami", "AMI", "ami", re2.MustCompile("Ami", re2.None)},
 		// Easy find-and-replacements...
 		{"Acl", "ACL", "acl", nil},
-		{"Acm", "ACM", "acm", nil},
+		// Prevent "AcmeEndpoint" from becoming "ACMeEndpoint" — "Acme" is
+		// the ACME protocol, not the ACM service abbreviation.
+		{"Acm", "ACM", "acm", re2.MustCompile("Acm(?!e)", re2.None)},
 		{"AIML", "AIML", "aiml", nil},
 		{"Acp", "ACP", "acp", nil},
 		{"Api", "API", "api", nil},
