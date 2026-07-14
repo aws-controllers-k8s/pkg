@@ -89,9 +89,12 @@ var (
 		{"Ami", "AMI", "ami", re2.MustCompile("Ami", re2.None)},
 		// Easy find-and-replacements...
 		{"Acl", "ACL", "acl", nil},
-		// Prevent "AcmeEndpoint" from becoming "ACMeEndpoint" — "Acme" is
-		// the ACME protocol, not the ACM service abbreviation.
-		{"Acm", "ACM", "acm", re2.MustCompile("Acm(?!e)", re2.None)},
+		// Match both the camel-cased "Acm" and the all-caps "ACM" forms of the
+		// ACM initialism, but NOT "Acme"/"ACMe" — "Acme" is the ACME protocol,
+		// not the ACM service abbreviation. Matching "ACM" (all-caps) is
+		// required so fields like CloudFront's "ACMCertificateArn" still
+		// lower-prefix to "acmCertificateARN" rather than "aCMCertificateARN".
+		{"Acm", "ACM", "acm", re2.MustCompile("(?:Acm|ACM)(?!e)", re2.None)},
 		{"AIML", "AIML", "aiml", nil},
 		{"Acp", "ACP", "acp", nil},
 		{"Api", "API", "api", nil},
