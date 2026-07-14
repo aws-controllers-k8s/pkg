@@ -39,6 +39,9 @@ func TestNames(t *testing.T) {
 		{"AcmeEndpoint", "AcmeEndpoint", "acmeEndpoint", "acme_endpoint", "acmeendpoint"},
 		{"AcmeExternalAccountBinding", "AcmeExternalAccountBinding", "acmeExternalAccountBinding", "acme_external_account_binding", "acmeexternalaccountbinding"},
 		{"AcmeDomainValidation", "AcmeDomainValidation", "acmeDomainValidation", "acme_domain_validation", "acmedomainvalidation"},
+		// CloudFront's ViewerCertificate.ACMCertificateArn must keep the ACM
+		// initialism when lower-prefixed (acmCertificateARN), not aCMCertificateARN.
+		{"ACMCertificateArn", "ACMCertificateARN", "acmCertificateARN", "acm_certificate_arn", "acmcertificatearn"},
 		{"AmiLaunchIndex", "AMILaunchIndex", "amiLaunchIndex", "ami_launch_index", "amilaunchindex"},
 		{"Amis", "AMIs", "amis", "amis", "amis"},
 		{"AmiType", "AMIType", "amiType", "ami_type", "amitype"},
