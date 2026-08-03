@@ -98,7 +98,11 @@ var (
 		{"AIML", "AIML", "aiml", nil},
 		{"Acp", "ACP", "acp", nil},
 		{"Api", "API", "api", nil},
-		{"Arn", "ARN", "arn", nil},
+		// Match Arn/Arns as CamelCase tokens, not the lowercase letters inside
+		// ordinary words such as Harness or Warning. Handle the plural first
+		// so snake case remains "arns" rather than "arn_s".
+		{"Arns", "ARNs", "arns", re2.MustCompile("(Arns|ARNs)(?=$|[A-Z0-9_])", re2.None)},
+		{"Arn", "ARN", "arn", re2.MustCompile("(Arn|ARN)(?=$|[A-Z0-9_])", re2.None)},
 		{"ArgoCd", "ArgoCD", "argoCD", nil},
 		{"Asn", "ASN", "asn", nil},
 		// eventbridge has a NetworkConfiguration.awsvpcConfiguration field for
