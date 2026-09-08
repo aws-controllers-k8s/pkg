@@ -141,6 +141,8 @@ var (
 		{"Ecmp", "ECMP", "ecmp", nil},
 		{"Fifo", "FIFO", "fifo", nil},
 		{"Fpga", "FPGA", "fpga", nil},
+		// GC (garbage collection); lookahead avoids matching "Gcp"/"Gcm"/"Gce"/"Gcs".
+		{"Gc", "GC", "gc", re2.MustCompile("Gc(?=[A-Z])", re2.None)},
 		{"Gid", "GID", "gid", nil},
 		{"Gpu", "GPU", "gpu", nil},
 		{"Grpc", "GRPC", "grpc", nil},
