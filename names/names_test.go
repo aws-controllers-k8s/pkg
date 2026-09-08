@@ -46,6 +46,12 @@ func TestNames(t *testing.T) {
 		{"Amis", "AMIs", "amis", "amis", "amis"},
 		{"AmiType", "AMIType", "amiType", "ami_type", "amitype"},
 		{"ArgoCd", "ArgoCD", "argoCD", "argo_cd", "argocd"},
+		// GC uppercased only before an uppercase letter.
+		{"PodGcControllerConfig", "PodGCControllerConfig", "podGCControllerConfig", "pod_gc_controller_config", "podgccontrollerconfig"},
+		{"TerminatedPodGcThreshold", "TerminatedPodGCThreshold", "terminatedPodGCThreshold", "terminated_pod_gc_threshold", "terminatedpodgcthreshold"},
+		// "Gcp"/"Gcm" (Gc+lowercase) must NOT be touched.
+		{"Gcp", "Gcp", "gcp", "gcp", "gcp"},
+		{"Gcm", "Gcm", "gcm", "gcm", "gcm"},
 		{"Harness", "Harness", "harness", "harness", "harness"},
 		{"HarnessEndpoint", "HarnessEndpoint", "harnessEndpoint", "harness_endpoint", "harnessendpoint"},
 		{"Warning", "Warning", "warning", "warning", "warning"},
