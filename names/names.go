@@ -146,6 +146,9 @@ var (
 		{"Gid", "GID", "gid", nil},
 		{"Gpu", "GPU", "gpu", nil},
 		{"Grpc", "GRPC", "grpc", nil},
+		// HEC (Splunk HTTP Event Collector): a token boundary on both sides so
+		// "Check" and all-caps values like "HEALTHCHECK" are left alone.
+		{"Hec", "HEC", "hec", re2.MustCompile("(?<![A-Z])(HEC|Hec)(?=[A-Z0-9_]|$)", re2.None)},
 		{"Html", "HTML", "html", nil},
 		// Prevent HTTPSPort from becoming httpSPort
 		{"Http", "HTTP", "http", re2.MustCompile("(HTTP((?!S[A-Z]))|Http(?!s))", re2.None)},
